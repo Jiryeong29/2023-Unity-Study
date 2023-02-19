@@ -30,8 +30,7 @@ Unity에서 지원하는 제약 컴포넌트 타입은 다음과 같습니다.
 ## Position Constraint
 
 Position Constraint 컴포넌트는 소스 게임 오브젝트를 따라가도록 게임 오브젝트를 움직인다.
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/764adde8-d1ff-4d22-ac33-aae1c4ecaea3/Untitled.png)
+https://elderly-study-ef2.notion.site/Constraint-5fcf664aa06f477f9bffadeed6e63547
 
 gameobject가 Player를 따라가도록 제약을 걸어줌
 
