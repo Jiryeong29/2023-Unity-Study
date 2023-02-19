@@ -50,12 +50,9 @@ gameobject가 Player를 따라가도록 제약을 걸어줌
 | Maintain Offset | 대상 객체와의 상대적인 위치를 유지할지 여부를 결정합니다. 이 값이 "On"으로 설정된 경우, 대상 객체와의 초기 상대적인 위치를 유지하면서 객체를 움직이게 됩니다. "Off"로 설정된 경우, 대상 객체와의 상대적인 위치를 무시하고 객체를 자유롭게 움직일 수 있습니다. |
 
 ### 주의) isActive를 반드시 활성화 시켜줘야 동작한다.
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/764adde8-d1ff-4d22-ac33-aae1c4ecaea3/Untitled.png)
-
-### ConstraintSettings>Lock을 풀고 의 **오프셋(Offset)**프로퍼티를 사용하여 게임 오브젝트를 제약하는 경우에 사용할 X, Y, Z 값을 지정하여 세밀한 위치 조정이 가능하다.
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b69d513d-a963-4746-a07d-ada4caccb9f9/Untitled.png)
+![image](https://user-images.githubusercontent.com/52111476/219954943-61a08200-7174-45d5-9c11-dc749d5af49d.png)
+### ConstraintSettings>Lock을 풀고 의 **오프셋(Offset)**프로퍼티를 사용하여 게임 오브젝트를 제약하는 경우에 사용할 X, Y, Z 값을 지정하여 세밀한 위치 조정이 가능하다.
+![image](https://user-images.githubusercontent.com/52111476/219954956-37e29e3e-8476-4a7f-b2d4-8faf9ace73c0.png)
 
 # [Look At Constraint](https://docs.unity3d.com/kr/2019.4/Manual/class-LookAtConstraint.html)
 
