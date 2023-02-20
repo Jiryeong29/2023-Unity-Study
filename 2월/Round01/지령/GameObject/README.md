@@ -301,13 +301,13 @@ void Start ()
 > **유니티에서 GetComponent랑 AddComponent 차이**
 > 
 > 
-> **`GetComponent`**와 **`AddComponent`**는 둘 다 Unity에서 GameObject의 Component를 가져오거나 추가하는 데 사용된다.
+> `GetComponent`와 `AddComponent`는 둘 다 Unity에서 GameObject의 Component를 가져오거나 추가하는 데 사용된다.
 > 
-> **`GetComponent`**는 이미 GameObject에 부착된 Component를 가져오는 데 사용된다. 예를 들어, 스크립트에서 **`Transform`** 컴포넌트를 가져와 위치, 회전 또는 크기를 변경할 수 있습니다. 또는 **`Rigidbody`**를 가져와 물리 시뮬레이션을 적용할 수 있다.
+> `GetComponent`는 이미 GameObject에 부착된 Component를 가져오는 데 사용된다. 예를 들어, 스크립트에서 `Transform` 컴포넌트를 가져와 위치, 회전 또는 크기를 변경할 수 있습니다. 또는 `Rigidbody`를 가져와 물리 시뮬레이션을 적용할 수 있다.
 > 
-> 반면에 **`AddComponent`**는 GameObject에 새로운 Component를 추가하는 데 사용된다. 예를 들어, 스크립트에서 **`SphereCollider`**를 추가하여 충돌 감지를 구현할 수 있다.
+> 반면에 `AddComponent`는 GameObject에 새로운 Component를 추가하는 데 사용된다. 예를 들어, 스크립트에서 `SphereCollider`를 추가하여 충돌 감지를 구현할 수 있다.
 > 
-> 따라서 **`GetComponent`**와 **`AddComponent`**는 서로 보완적인 기능을 제공하며 다른 용도로 사용된다. **`GetComponent`**는 이미 존재하는 Component를 가져오는 데 사용되고, **`AddComponent`**는 새로운 Component를 추가하는 데 사용된다.
+> 따라서 `GetComponent`와 `AddComponent`는 서로 보완적인 기능을 제공하며 다른 용도로 사용된다. `GetComponent`는 이미 존재하는 Component를 가져오는 데 사용되고, `AddComponent`는 새로운 Component를 추가하는 데 사용된다.
 > 
 
 ## ****다른 게임 오브젝트의 컴포넌트 액세스****
