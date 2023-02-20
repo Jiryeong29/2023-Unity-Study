@@ -1,3 +1,5 @@
+# GameObject
+
 # 목차
 
 1. [활성상태](https://www.notion.so/GameObject-f81bcb3e2f5c4bfea2962db9088e8196)
@@ -8,8 +10,8 @@
     3. [CompareTag](https://www.notion.so/GameObject-f81bcb3e2f5c4bfea2962db9088e8196)
     4. [FindWithTag](https://www.notion.so/GameObject-f81bcb3e2f5c4bfea2962db9088e8196)
 3. [컴포넌트 추가 및 제거](https://www.notion.so/GameObject-f81bcb3e2f5c4bfea2962db9088e8196)
-    1. **[AddComponent<Type>](https://www.notion.so/GameObject-f81bcb3e2f5c4bfea2962db9088e8196)**
-    2. **[Object.Destory](https://www.notion.so/GameObject-f81bcb3e2f5c4bfea2962db9088e8196)**
+    1. [AddComponent<Type>](https://www.notion.so/GameObject-f81bcb3e2f5c4bfea2962db9088e8196)
+    2. [Object.Destory](https://www.notion.so/GameObject-f81bcb3e2f5c4bfea2962db9088e8196)
 4. [컴포턴트 액세스](https://www.notion.so/GameObject-f81bcb3e2f5c4bfea2962db9088e8196)
     1.  [GetComponent](https://www.notion.so/GameObject-f81bcb3e2f5c4bfea2962db9088e8196)
     2. [유니티에서 GetComponent랑 AddComponent 차이](https://www.notion.so/GameObject-f81bcb3e2f5c4bfea2962db9088e8196)
@@ -395,3 +397,80 @@ void Start()
 오브젝트 또는 오브젝트 컬렉션은 [GameObject.FindWithTag](https://docs.unity3d.com/kr/2023.1/ScriptReference/GameObject.FindWithTag.html) 및 [GameObject.FindGameObjectsWithTag](https://docs.unity3d.com/kr/2023.1/ScriptReference/GameObject.FindGameObjectsWithTag.html) 메서드를 사용하여 태그로도 찾을 수 있습니다.
 
 다음은 한 명의 요리사 캐릭터가 등장하는 요리 게임에서 주방에 여러 개의 스토브(각각 “Stove” 태그 지정)가 있는 경우입니다.
+
+```csharp
+GameObject chef;
+GameObject[] stoves;
+
+void Start()
+{
+    chef = GameObject.FindWithTag("Chef");
+    stoves = GameObject.FindGameObjectsWithTag("Stove");
+}
+```
+
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject-activeInHierarchy.html | GameObject가 Scene에서 활성인지 여부를 정의합니다. |
+| --- | --- |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject-activeSelf.html | 이 GameObject의 로컬 활성 상태입니다. (읽기 전용) |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject-isStatic.html | GameObject의 StaticEditorFlags를 가져오고 설정합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject-layer.html | 게임 오브젝트가 있는 레이어. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject-scene.html | GameObject가 속한 장면. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject-sceneCullingMask.html | 씬 컬링 마스크 Unity는 게임 오브젝트를 렌더링할 씬을 결정하는 데 사용합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject-tag.html | 이 게임 오브젝트의 태그입니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject-transform.html | 이 GameObject에 연결된 Transform입니다. |
+
+### **생성자**
+
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject-ctor.html | 이름이 지정된 새 게임 개체를 만듭니다. |
+| --- | --- |
+
+### **공개 방법**
+
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.AddComponent.html | 게임 개체에 className이라는 구성 요소 클래스를 추가합니다. |
+| --- | --- |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.BroadcastMessage.html | 이 게임 개체 또는 그 자식의 모든 MonoBehaviour에서 methodName이라는 메서드를 호출합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.CompareTag.html | 이 게임 개체에 태그가 붙어 있습니까? |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.GetComponent.html | 게임 개체에 하나가 첨부되어 있으면 Type 유형의 구성 요소를 반환하고, 그렇지 않으면 null을 반환합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.GetComponentInChildren.html | 깊이 우선 검색을 사용하여 GameObject 또는 그 자식에 있는 Type 유형의 구성 요소를 반환합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.GetComponentInParent.html | GameObject 또는 그 부모 중 하나에서 Type 유형의 구성 요소를 검색합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.GetComponents.html | GameObject에서 Type 유형의 모든 구성 요소를 반환합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.GetComponentsInChildren.html | 깊이 우선 검색을 사용하여 GameObject 또는 그 자식 자식에 있는 Type 유형의 모든 구성 요소를 반환합니다. 재귀적으로 작동합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.GetComponentsInParent.html | GameObject 또는 그 부모 중 하나에서 Type 유형의 모든 구성 요소를 반환합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.SendMessage.html | 이 게임 개체의 모든 MonoBehaviour에서 methodName이라는 메서드를 호출합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.SendMessageUpwards.html | 이 게임 개체의 모든 MonoBehaviour와 동작의 모든 조상에 대해 methodName이라는 메서드를 호출합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.SetActive.html | 주어진 참 또는 거짓 값에 따라 GameObject를 활성화/비활성화합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.TryGetComponent.html | 존재하는 경우 지정된 유형의 구성 요소를 가져옵니다. |
+
+### **정적 메서드**
+
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.CreatePrimitive.html | 프리미티브 메시 렌더러와 적절한 콜라이더를 사용하여 게임 개체를 생성합니다. |
+| --- | --- |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.Find.html | GameObject를 이름으로 찾아 반환합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.FindGameObjectsWithTag.html | 활성 GameObjects 태그 태그의 배열을 반환합니다. GameObject가 발견되지 않으면 빈 배열을 반환합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/GameObject.FindWithTag.html | 하나의 활성 GameObject 태그 태그를 반환합니다. GameObject가 발견되지 않으면 null을 반환합니다. |
+
+### **상속된 구성원**
+
+### **속성**
+
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Object-hideFlags.html | 개체를 숨겨야 합니까, 장면과 함께 저장해야 합니까, 아니면 사용자가 수정할 수 있어야 합니까? |
+| --- | --- |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Object-name.html | 개체의 이름입니다. |
+
+### **공개 방법**
+
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Object.GetInstanceID.html | 개체의 인스턴스 ID를 반환합니다. |
+| --- | --- |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Object.ToString.html | 객체의 이름을 반환합니다. |
+
+### **정적 메서드**
+
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Object.Destroy.html | GameObject, 구성 요소 또는 자산을 제거합니다. |
+| --- | --- |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Object.DestroyImmediate.html | 개체 obj를 즉시 파괴합니다. 대신 Destroy를 사용하는 것이 좋습니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Object.DontDestroyOnLoad.html | 새 장면을 로드할 때 대상 개체를 파괴하지 마십시오. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Object.FindObjectOfType.html | Type 유형의 첫 번째 활성 로드된 개체를 반환합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Object.FindObjectsOfType.html | 유형 유형의 모든 활성 로드된 개체 목록을 반환합니다. |
+| https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Object.Instantiate.htmlvvv | 개체 원본을 복제하고 복제본을 반환합니다. |
+
+### **연산자**
