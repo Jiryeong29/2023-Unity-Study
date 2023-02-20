@@ -1,6 +1,6 @@
 # GameObject
 
-# 목차
+## 목차
 
 1. [활성상태](https://www.notion.so/GameObject-f81bcb3e2f5c4bfea2962db9088e8196)
     1. [GamObject.SetActive](https://www.notion.so/GameObject-f81bcb3e2f5c4bfea2962db9088e8196)
@@ -21,7 +21,7 @@
     1. [Find메서드 이용](https://www.notion.so/GameObject-f81bcb3e2f5c4bfea2962db9088e8196)
 7. [이름이나 태그로 게임 오브젝트 찾기](https://www.notion.so/GameObject-f81bcb3e2f5c4bfea2962db9088e8196)
 
-# GameObject
+## GameObject
 
 [[참고한 링크 바로가기]](https://docs.unity3d.com/kr/2023.1/Manual/class-GameObject.html)
 
@@ -29,7 +29,8 @@
 
 ## 활성상태
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cd00abaa-30aa-42a2-bde5-d2f5201632cb/Untitled.png)
+![image](https://user-images.githubusercontent.com/52111476/219996395-ef9a6257-95f5-4736-b627-c19eec3628d8.png)
+
 
 기본적으로 게임오브젝트는 활성상태이지만, 비활성화하여 게임 오브젝트에 연결된 모든 컴포넌트를 해제할 수 있다.
 
@@ -324,8 +325,8 @@ public class Chef : MonoBehaviour
 이 변수는 인스펙터에서 **GameObject 필드**로 표시됩니다.
 
 씬 또는 계층 구조 패널에서 오브젝트를 이 변수로 드래그하여 할당할 수 있습니다.
+![image](https://user-images.githubusercontent.com/52111476/219996465-bab00fd7-201a-41aa-b2d2-752f30ac6d6e.png)
 
-![https://docs.unity3d.com/kr/2023.1/uploads/Main/PrefabDragIntoField.png](https://docs.unity3d.com/kr/2023.1/uploads/Main/PrefabDragIntoField.png)
 
 GetComponent 함수와 컴포넌트 액세스 변수는 다른 요소와 마찬가지
 
