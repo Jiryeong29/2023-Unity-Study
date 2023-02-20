@@ -119,17 +119,18 @@ public class Example : MonoBehaviour
 {
     void Start()
     {
-        //Set the tag of this GameObject to Player
+        // 스크립트가 시작될 때 게임 오브젝트의 태그를 "Player"로 설정합니다.
         gameObject.tag = "Player";
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        //Check to see if the tag on the collider is equal to Enemy
+        // 충돌 이벤트를 일으킨 콜라이더가 "Enemy" 태그를 가지고 있는지 확인합니다.
         if (other.tag == "Enemy")
         {
-            Debug.Log("Triggered by Enemy");
-        }
+            // 만약 태그가 "Enemy"이면 콘솔에 메시지를 출력합니다.
+            Debug.Log("Triggered by Enemy");        
+				}
     }
 }
 ```
@@ -137,18 +138,18 @@ public class Example : MonoBehaviour
 ### GameObject.layer
 
 ```csharp
-// Put the GameObject in the ignore raycast layer (2)
-
 using UnityEngine;
 
+// 이 스크립트는 에디터 모드에서도 실행되도록 하는 ExecuteInEditMode 속성을 가집니다.
 [ExecuteInEditMode]
 public class ExampleClass : MonoBehaviour
 {
     void Awake()
     {
-        //gameObject.layer uses only integers, but we can turn a layer name into a layer integer using LayerMask.NameToLayer()
+        // "Ignore Raycast" 레이어의 인덱스를 가져와서 게임 오브젝트의 레이어를 설정합니다.
         int LayerIgnoreRaycast = LayerMask.NameToLayer("Ignore Raycast");
         gameObject.layer = LayerIgnoreRaycast;
+        // 현재 레이어를 디버그 로그에 출력합니다.
         Debug.Log("Current layer: " + gameObject.layer);
     }
 }
@@ -157,17 +158,18 @@ public class ExampleClass : MonoBehaviour
 ### CompareTag
 
 ```csharp
-// Immediate death trigger.
-// Destroys any colliders that enter the trigger, if they are tagged "Player".
 using UnityEngine;
 using System.Collections;
 
 public class ExampleClass : MonoBehaviour
 {
+    // 트리거 영역 안에 다른 게임 오브젝트가 들어갔을 때 호출되는 함수입니다.
     void OnTriggerEnter(Collider other)
     {
+        // 들어온 게임 오브젝트가 "Player" 태그를 가지고 있다면
         if (other.gameObject.CompareTag("Player"))
         {
+            // 그 게임 오브젝트를 파괴합니다.
             Destroy(other.gameObject);
         }
     }
